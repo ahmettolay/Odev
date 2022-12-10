@@ -2,11 +2,17 @@ package bankApp;
 
 public class UserManager {
 
+	String emailFormat ="@xbanka.com";
+	
 	public void otomatikEmailOluştur(User user) {
 
 		System.out.println(user.getEmail());
 
 	}
+	
+	
+	
+	
 
 	public void bilgileriGoster(User user) {
 System.out.println("İsim : "+user.getName()+
@@ -27,7 +33,7 @@ System.out.println("İsim : "+user.getName()+
 
 	public void krediBorcuOdeme(Account account, double taksit) {
 
-		if (account.getKrediBaşvursu() == false) {
+		if (account.getIstenenKredi() == 0) {
 			System.out.println("Kredi Borcunuz Yoktur...");
 		} else {
 			

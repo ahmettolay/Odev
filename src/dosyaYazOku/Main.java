@@ -10,12 +10,13 @@ public class Main {
 		File file = new File(dosyaYolu);
 
 		// ------------------DOSYA OLUŞTUR-------------------//
-	//	FileExample.dosyaYarat(file);
+		FileExample.dosyaYarat(file);
 
 		// ------------------DOSYA OLUŞTUR-------------------//
-	//	FileExample.dosyaYaz(file);
+		FileExample.dosyaYaz(file);
 		
 		FileExample.dosyaOku(file);
+		
 	}
 
 }

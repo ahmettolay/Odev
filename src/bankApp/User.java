@@ -15,6 +15,7 @@ public class User {
 	public User(String name, String sureName,  Account account) {
 		
 		this.name = name;
+		
 		this.sureName = sureName;
 		
 		this.account = account;

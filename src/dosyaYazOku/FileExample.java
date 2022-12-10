@@ -34,12 +34,17 @@ public class FileExample {
 
 			if (file.exists())// exists= var, mevcut
 			{
-				FileWriter fileWriter = new FileWriter(file);
+				FileWriter fileWriter = new FileWriter(file, true); // true vermemizin sebebi 2. kez yazabilmmemizi
+																	// sağlar
 				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+				// fileWriter.write("2.ödev yapıldı.");
+				// fileWriter.close();
 				bufferedWriter.write("Ödev yapıldı...");
 				bufferedWriter.close();
 				System.out.println("Dosyaya yazıldı...");
 
+			} else {
+				System.out.println("Dosya  bulunamadı...");
 			}
 		} catch (Exception ex) {
 
@@ -58,9 +63,10 @@ public class FileExample {
 				FileReader fileReader = new FileReader(file);
 				String line;
 				BufferedReader bufferedReader = new BufferedReader(fileReader);
-				while ((line=bufferedReader.readLine())!=null) {
-					
-					System.out.println(line);
+				while (bufferedReader.readLine() != null) {
+
+					System.out.println(bufferedReader.readLine());
+
 				}
 			} catch (Exception ex) {
 
@@ -68,6 +74,8 @@ public class FileExample {
 				ex.printStackTrace();
 			}
 
+		} else {
+			System.out.println("Dosya bulunamadı...");
 		}
 
 	}
